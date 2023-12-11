@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="media_queries.css">
+    <link rel="stylesheet" href="footer.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Your Name</h1>
+        <nav >
+            <button class="menu-btn" onclick="toggleMenu()"><h2>Menu</h2></button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- about.html -->
+<section>
+    <h2>About Me</h2>
+    <p>Introduce yourself and share your background, skills, and interests.</p>
+</section>
+<script>
+    function toggleMenu() {
+        var nav = document.querySelector('nav');
+        nav.classList.toggle('show-menu');
+    }
+</script>
+</body>
+<footer>
+    <div class="footer-bar">
+        <div class="contact-info">
+            <p>Contact me:</p>
+            <p>Email: <a href="mailto:random@example.com">random@example.com</a></p>
+            <p>GitHub: <a href="https://github.com/random" target="_blank">github.com/random</a></p>
+        </div>
+    </div>
+    <p>&copy; 2023 Your Name</p>
+</footer>
+</html>
