@@ -1,0 +1,73 @@
+/* Default styles for mobile view (no media query) */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr; /* One column layout */
+  gap: 10px;
+}
+.grid figure img{
+  border: solid black;
+}
+.grid img{
+  max-height: 40vh;
+}
+.grid figcaption {
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  text-align: center;
+}
+
+
+/* Media query for tablet view (min-width: 772px) */
+@media screen and (min-width: 772px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* Two column layout */
+  }
+
+  .grid figure img {
+    border-radius: 50%; /* Set border radius for circular shape */
+  }
+  .grid figure {
+    border-radius: 50%; /* Set border radius for circular shape */
+  }
+
+  .grid figure:last-child {
+    grid-column: span 2; /* Make the last figure take up both columns */
+  }
+}
+
+/* Media query for large screen view (min-width: 992px) */
+@media screen and (min-width: 992px) {
+  .grid figure {
+    border-radius: 0; /* Remove border radius */
+  }
+  .grid figure img {
+    border-radius: 0; /* Remove border radius */
+  }
+
+  .grid figure:nth-child(3n) {
+    grid-column: span 2; /* Make every third figure take up both columns */
+  }
+}
+
+/* Media query for prefers-reduced-motion */
+@media screen and (prefers-reduced-motion: reduce) {
+  html, body {
+    scroll-behavior: auto; /* Remove scroll behavior */
+  }
+}
+
+/* Media query for dark color scheme */
+@media screen and (prefers-color-scheme: dark) {
+  .grid figure {
+    background-color: #333; /* Dark background color */
+    color: #ffeb3b; /* Light font color (yellow-ish) */
+    border-color: #000; /* Black border color */
+  }
+}
+
+/* Set object-fit for images to ensure they fit into the figure */
+.grid figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
