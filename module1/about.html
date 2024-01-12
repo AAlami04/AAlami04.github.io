@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="media_queries.css">
+    <link rel="stylesheet" href="footer.css">
+    <title>About</title>
+</head>
+<body>
+    <header>
+        <h1>About me page</h1>
+        <nav>
+            <button class="menu-btn" onclick="toggleMenu()"><h2>Menu</h2></button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>About Me</h2>
+        <p>
+            I am a highly motivated individual with a strong educational background. During high school, I excelled in both civil engineering and mathematics. My commitment to academic excellence earned me a high degree in these fields.
+        </p>
+        <p>
+            Currently, in college, I am passionately focusing on software development. This journey has allowed me to combine my analytical skills from my high school background with the creativity and problem-solving mindset required in the software development field.
+        </p>
+        <br>
+        <div>
+            <table> 
+                <tr>
+                    <td>
+                        <h3>High School Achievements</h3>
+                        <ul>
+                            <li>Received high honors in civil engineering studies</li>
+                            <li>Excelled in advanced mathematics courses</li>
+                        </ul>
+                    </td>
+                </tr><tr>
+                    <td>
+                        <h3>Current Focus in College</h3>
+                        <p>
+                            Actively pursuing software development studies to expand my knowledge and skills in this dynamic field.
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            var nav = document.querySelector('nav');
+            nav.classList.toggle('show-menu');
+        }
+    </script>
+
+    <footer>
+        <div class="footer-bar">
+            <div class="contact-info">
+                <p>Contact me:</p>
+                <p>Email: <a href="mailto:random@example.com">random@example.com</a></p>
+                <p>GitHub: <a href="https://github.com/random" target="_blank">github.com/random</a></p>
+            </div>
+        </div>
+        <p>&copy; 2023 Your Name</p>
+    </footer>
+</body>
+</html>

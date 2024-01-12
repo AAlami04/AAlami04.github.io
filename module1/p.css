@@ -1,0 +1,31 @@
+/* ... (Previous CSS) ... */
+
+/* Additional styling for the portfolio images */
+
+/* ... (Remaining CSS) ... */
+
+
+styles
+section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}
+
+
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+nav ul li a {
+    background-color: #4169e1; /* Dark blue */
+    color: #fff;
+}

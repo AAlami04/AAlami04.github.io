@@ -1,0 +1,204 @@
+/* Media Queries for Responsiveness */
+
+
+
+/*default for mobile view*/
+/*test*/
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+}
+.portfolio-item {
+    flex: 0 0 100%; /* Display 2 items per row for tablet view */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+.portfolio-item img {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Zoom effect */
+.zoomed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.zoomed img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/*test end*/
+
+
+/*TEST FOR IMAGE IN ABOUT*/
+
+/*TEST END*/
+body {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+}
+
+.menu-btn {
+    
+    display: block;
+    margin: 0 auto; /* Center the menu button */
+    text-align: left;
+    background-color: #4169e1; /* Dark blue */
+    color: #fff;
+    border: 2px solid #fff; /* Add border to the button */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Add transition for smooth hover effect */
+}
+
+.menu-btn:hover {
+    background-color: #a769e6; /* Change the background color on hover */
+    color: #fff; /* Change the text color on hover */
+    border-radius: 4em;
+}
+nav.show-menu ul {
+    display: block; /* Show the navigation menu when the show-menu class is applied */
+}
+
+nav {
+    text-align: center;
+}
+
+nav ul {
+    display: none; /* Hide the navigation menu by default */
+}
+
+nav ul li {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Style the menu links */
+nav ul li a {
+    display: block;
+    padding: 10px;
+    background-color: #81b8ec;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s; /* Add transition for smooth hover effect */
+    border-radius: 1em;
+    margin-right: 10vw;
+}
+
+nav ul li a:hover {
+    background-color: #a769e6; /* Change the background color on hover */
+    color: #151125; /* Change the text color on hover */
+    border-radius: 4em;
+}
+section img {
+    max-width: 100%; /* Display 1 image horizontally */
+    margin-bottom: 10px;
+}
+section{
+    min-width: 90%;
+}
+
+
+/* Existing Media Queries */
+
+@media only screen and (min-width: 481px) {
+    /* Tablet View */
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    /* Add styling for portfolio images in tablet view */
+    section img {
+        max-width: 48%; /* Display 2 images horizontally */
+        float: left;
+        margin-right: 2px;
+        margin-bottom: 10px;
+    }
+    .portfolio-item {
+        flex: 0 0 48%; /* Display 2 items per row for tablet view */
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    section{
+        min-width: 70%;
+    }
+}
+
+@media only screen and (min-width: 998px) {
+    /* Desktop View */
+    .menu-btn {
+        display: none;
+    }
+
+    nav {
+        text-align: right;
+    }
+
+    nav ul {
+        display: inline; /* Display the navigation list inline */
+    }
+
+    nav ul li {
+        display: inline;
+        margin-right: 0.5vw;
+        margin-bottom: 0; /* Remove bottom margin */
+    }
+
+    /* Add styles for the menu links */
+    nav ul li a {
+        display: inline-block; /* Display the menu links as blocks */
+        padding: 10px;
+        background-color: hsl(234, 100%, 68%);/* Change the background color as needed */
+        color: #fff;
+        text-decoration: none;
+        border-radius: 1em;
+        border: solid white 1px;
+        margin-right: 0.1vw;
+    }
+
+    /* Add styling for portfolio images in desktop view */
+    section img {
+        max-width: 23%; /* Display 4 images horizontally */
+        float: left;
+        margin-right: 2%;
+        margin-bottom: 10px;
+        height: 100px;
+    }
+    .portfolio-item {
+        flex: 0 0 24%; /* Display 4 items per row for desktop view */
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    section{
+        min-width: 96vw;
+    }
+}
+
+/* New Media Queries for Phone View */
+
+
+/* Add more media queries as needed */

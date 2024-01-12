@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="media_queries.css">
+    <link rel="stylesheet" href="footer.css">
+  
+      
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        <h1>Clickable images</h1>
+        <nav >
+            <button class="menu-btn" onclick="toggleMenu()"><h2>Menu</h2></button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- about.html -->
+    <section class="portfolio">
+        <div class="portfolio-item">
+            <img src="img/desktop.jpg" alt="Image 1" class="zoomable">
+        </div>
+        <div class="portfolio-item">
+            <img src="img/desktop.jpg" alt="Image 2" class="zoomable">
+        </div>
+        <div class="portfolio-item">
+            <img src="img/desktop.jpg" alt="Image 3" class="zoomable">
+        </div>
+        <div class="portfolio-item">
+            <img src="img/desktop.jpg" alt="Image 4" class="zoomable">
+        </div>
+    </section>
+    <script>
+        function toggleMenu() {
+            var nav = document.querySelector('nav');
+            nav.classList.toggle('show-menu');
+        }
+    </script>
+    <!-- ... (Previous HTML) ... -->
+
+<script>
+    // JavaScript to handle zooming effect
+    document.addEventListener('DOMContentLoaded', function () {
+        const zoomableImages = document.querySelectorAll('.zoomable');
+        
+        zoomableImages.forEach(image => {
+            image.addEventListener('click', function () {
+                // Create a modal for the zoomed view
+                const modal = document.createElement('div');
+                modal.className = 'zoomed';
+                modal.innerHTML = `<img src="${this.src}" alt="${this.alt}">`;
+                
+                // Append the modal to the body
+                document.body.appendChild(modal);
+                
+                // Dismiss the zoomed view when clicking away
+                modal.addEventListener('click', function () {
+                    modal.remove();
+                });
+            });
+        });
+    });
+</script>
+
+<!-- ... (Remaining HTML) ... -->
+
+
+</body>
+<footer>
+    <div class="footer-bar">
+        <div class="contact-info">
+            <p>Contact me:</p>
+            <p>Email: <a href="mailto:random@example.com">random@example.com</a></p>
+            <p>GitHub: <a href="https://github.com/random" target="_blank">github.com/random</a></p>
+        </div>
+    </div>
+    <p>&copy; 2023 Your Name</p>
+</footer>
+</html>
